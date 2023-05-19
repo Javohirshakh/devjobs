@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import MainPage from "../view/MainPage.vue"
-import TestItem from "../view/TestItem.vue"
+import ItemPage from "../view/ItemPage.vue"
 
 const routes = [
     {
@@ -12,7 +12,7 @@ const routes = [
     {
         path: "/jobs/:id",
         name: "item",
-        component: TestItem,
+        component: ItemPage,
     },
     {
         path: "/search",
