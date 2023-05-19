@@ -1,7 +1,7 @@
 <template>
   <div class="joblist lg:container p-4 2xl:p-16 xl:p-0 mx-auto">
     <div class="flex justify-between flex-wrap gap-y-20">
-      <template v-for="(item, index) in visiblePublications" :key="item.time_published">
+      <template v-for="item in visiblePublications" :key="item.time_published">
         <JobItem :item="item" />
       </template>
     </div>
@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
     // Handle initial filtering when the component is mounted
-    this.filterFromURLParams();
+    // this.filterFromURLParams();
   },
   methods: {
     loadMore() {
@@ -49,7 +49,7 @@ export default {
         location: this.$route.query.location || '',
         fullTimeOnly: this.$route.query.fullTimeOnly || '',
       };
-      this.$router.push({ query: queryParams });
+
     },
     filterFromURLParams() {
       // Perform the filtering with the URL parameters

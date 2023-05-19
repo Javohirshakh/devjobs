@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Search from "./Search.vue";
-import JobList from "./JobList.vue";
+import Header from "../components/Header.vue";
+import Search from "../components/Search.vue";
+import JobList from "../components/JobList.vue";
 import publications from "../data.json";
 
 export default {

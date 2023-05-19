@@ -39,8 +39,7 @@ export default {
   props: ['publications'],
   data() {
     return {
-
-        titleFilter: '',
+      titleFilter: '',
       locationFilter: '',
       fullTimeOnly: false,
     };
@@ -70,7 +69,8 @@ export default {
         location: this.locationFilter,
         fullTimeOnly: this.fullTimeOnly.toString(),
       };
-      this.$router.push({ query: queryParams });
+
+      this.$router.replace({ path: '/search', query: queryParams });
     },
     filterFromURLParams() {
       const query = this.$route.query;
@@ -79,9 +79,6 @@ export default {
       this.fullTimeOnly = query.fullTimeOnly === 'true';
       this.searchJobs();
     },
-  },
-  created() {
-    this.filterFromURLParams();
   },
 };
 </script>
